@@ -1,0 +1,18 @@
+{
+  "name": "node-gitlab",
+  "version": "1.0.0",
+  "description": "access gitlab api by using node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gitlab",
+    "api"
+  ],
+  "author": "huang.xinghui <huang.x.hui@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^6.3.0"
+  }
+}
