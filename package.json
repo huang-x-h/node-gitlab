@@ -1,5 +1,5 @@
 {
-  "name": "node-gitlab",
+  "name": "@huang.xinghui/node-gitlab",
   "version": "1.0.0",
   "description": "access gitlab api by using node",
   "repository": {

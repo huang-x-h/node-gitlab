@@ -3,9 +3,9 @@ access gitlab api by using node
 
 ## Install
 
-** Node.js 4 or higher
+** Node.js 4 or higher **
 
-    $ npm install --save node-gitlab
+    $ npm install @huang.xinghui/node-gitlab --save
 
 ## Usage
 
