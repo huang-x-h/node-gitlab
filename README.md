@@ -1,12 +1,19 @@
 #node-gitlab
 access gitlab api by using node
 
+## Install
+
+** Node.js 4 or higher
+
+    $ npm install --save node-gitlab
+
 ## Usage
 
-    var Gitlab = require('node-gitlab');
-    var gitlab = new Gitlab(url, token);
+    var gitlab = require('node-gitlab').connect(url, token);
 
-    gitlab.issues.all(projectId);
+    gitlab.issues.all(projectId).then(function(issues) {
+      // do something
+    });
 
 ## API
 
