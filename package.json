@@ -1,11 +1,7 @@
 {
   "name": "@huang.xinghui/node-gitlab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "access gitlab api by using node",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:huang-x-h/node-gitlab.git"
-  },
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +12,14 @@
   ],
   "author": "huang.xinghui <huang.x.hui@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huang-x-h/node-gitlab.git"
+  },
+  "bugs": {
+    "url": "https://github.com/huang-x-h/node-gitlab/issues"
+  },
+  "homepage": "https://github.com/huang-x-h/node-gitlab",
   "dependencies": {
     "got": "^6.3.0"
   }
