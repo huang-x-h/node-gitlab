@@ -9,6 +9,8 @@ access gitlab api by using node
 
 ## Usage
 
+    // url is your gitlab api path such as http://example.com/api/v3/
+    // token is your user private token
     var gitlab = require('node-gitlab').connect(url, token);
 
     gitlab.issues.all(projectId).then(function(issues) {

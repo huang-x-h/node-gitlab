@@ -2,6 +2,10 @@
   "name": "node-gitlab",
   "version": "1.0.0",
   "description": "access gitlab api by using node",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:huang-x-h/node-gitlab.git"
+  },
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
