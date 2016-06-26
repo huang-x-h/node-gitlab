@@ -1,6 +1,6 @@
 {
-  "name": "@huang.xinghui/node-gitlab",
-  "version": "1.0.1",
+  "name": "gitlab-node",
+  "version": "0.1.0",
   "description": "access gitlab api by using node",
   "main": "lib/index.js",
   "scripts": {
