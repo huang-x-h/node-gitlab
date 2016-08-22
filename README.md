@@ -26,7 +26,15 @@ gitlab.issues.all(projectId).then(function(issues) {
 
         query project all issues
 
-    - query(projectId, milestoneId)
+    - create(projectId, issue)
+
+        create a new project issue
+
+    - query(projectId, issueId)
+
+        gets a single project issue
+
+    - queryByMilestoneId(projectId, milestoneId)
 
         query project one milestone all issues
 
@@ -35,7 +43,11 @@ gitlab.issues.all(projectId).then(function(issues) {
 
         query project all milestones
 
-    - query(projectId, title)
+    - query(projectId, milestoneId)
+
+        gets a single project milestone
+
+    - queryByTitle(projectId, title)
 
         query project milestone by title
 
@@ -46,5 +58,10 @@ gitlab.issues.all(projectId).then(function(issues) {
 
 - tags
     - all(projectId)
-    
+
         query project all tags
+
+- notes
+    - all(projectId, issueId)
+
+        gets a list of all notes for a single issue
