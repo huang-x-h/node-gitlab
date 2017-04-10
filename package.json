@@ -1,8 +1,11 @@
 {
   "name": "gitlab-node",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "access gitlab api by using node",
   "main": "lib/index.js",
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

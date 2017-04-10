@@ -65,3 +65,24 @@ gitlab.issues.all(projectId).then(function(issues) {
     - all(projectId, issueId)
 
         gets a list of all notes for a single issue
+
+- users
+    - all()
+
+        query all users
+
+    - query(userId)
+
+        query single user info.
+
+    - create(user)
+
+        create user
+
+    - update(userId, user)
+
+        update single user info
+
+    - delete(userId)
+
+        delete user
