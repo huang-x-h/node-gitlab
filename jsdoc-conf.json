@@ -1,0 +1,27 @@
+{
+  "source": {
+    "include": ["README.md", "package.json", "lib/"],
+    "exclude": [
+      "lib/utils/"
+    ]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "opts": {
+    "template": "./node_modules/ink-docstrap/template",
+    "destination": "./doc/",
+    "recurse": true,
+    "verbose": true,
+    "encoding": "utf8",
+    "readme": "./README.md",
+    "package": "./package.json"
+  },
+  "templates": {
+    "copyright": "gitlab-node Copyright © 2016-2017 huang.xinghui.",
+    "outputSourceFiles": false,
+    "systemName": "gitlab-node",
+    "theme": "lumen",
+    "search": false
+  }
+}

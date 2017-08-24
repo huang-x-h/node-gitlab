@@ -1,5 +1,6 @@
-#node-gitlab
-access gitlab api by using node, support v4
+# node-gitlab
+
+> access gitlab api by using node, support v4
 
 ## Install
 
@@ -10,7 +11,7 @@ access gitlab api by using node, support v4
 ```js
 // url is your gitlab api path such as http://example.com/api/v4/
 // token is your user private token
-var gitlab = require('gitlab-node').connect(url, token);
+const gitlab = require('gitlab-node').connect(url, token);
 
 gitlab.issues.proejcts(projectId).then(function(issues) {
   // do something
