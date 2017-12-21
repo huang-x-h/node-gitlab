@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>gitlab-node Class: Users</title>
+	<title>gitlab-node Class: Issues</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,13 +61,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Users</h1>
+	<h1 class="page-title">Class: Issues</h1>
 <section>
 
 <header>
     
         <h2>
-        Users
+        Issues
         </h2>
         
     
@@ -80,7 +80,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Users"><span class="type-signature"></span>new Users()</h4>
+    <h4 class="name" id="Issues"><span class="type-signature"></span>new Issues()</h4>
     
     
 </dt>
@@ -172,7 +172,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="all"><span class="type-signature"></span>all()</h4>
+    <h4 class="name" id="all"><span class="type-signature"></span>all(qs)</h4>
     
     
 </dt>
@@ -180,105 +180,7 @@
 
     
     <div class="description">
-        <p>query all users</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="create"><span class="type-signature"></span>create(user)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>create user</p>
+        <p>Get all issues created by the authenticated user.</p>
     </div>
     
 
@@ -313,7 +215,7 @@
 
         <tr>
             
-                <td class="name"><code>user</code></td>
+                <td class="name"><code>qs</code></td>
             
 
             <td class="type">
@@ -330,7 +232,7 @@
 
             
 
-            <td class="description last"><p>user infromation</p></td>
+            <td class="description last"><p>query params</p></td>
         </tr>
 
     
@@ -418,7 +320,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="delete"><span class="type-signature"></span>delete(userId)</h4>
+    <h4 class="name" id="create"><span class="type-signature"></span>create(projectId, issue)</h4>
     
     
 </dt>
@@ -426,7 +328,7 @@
 
     
     <div class="description">
-        <p>delete user</p>
+        <p>create a new project issue</p>
     </div>
     
 
@@ -461,7 +363,384 @@
 
         <tr>
             
-                <td class="name"><code>userId</code></td>
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>issue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="group"><span class="type-signature"></span>group(groupId, qs)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a list of a group's issues.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>groupId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the group owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>qs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>query params</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="milestone"><span class="type-signature"></span>milestone(projectId, milestoneId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Gets all issues assigned to a single project milestone.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>milestoneId</code></td>
             
 
             <td class="type">
@@ -478,7 +757,7 @@
 
             
 
-            <td class="description last"><p>The ID of a user</p></td>
+            <td class="description last"><p>The ID of a project milestone</p></td>
         </tr>
 
     
@@ -574,7 +853,7 @@
 
     
     <div class="description">
-        <p>Get the users list of a project.</p>
+        <p>Get a list of a project's issues.</p>
     </div>
     
 
@@ -717,7 +996,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="query"><span class="type-signature"></span>query(userId)</h4>
+    <h4 class="name" id="query"><span class="type-signature"></span>query(projectId, issueIid)</h4>
     
     
 </dt>
@@ -725,7 +1004,7 @@
 
     
     <div class="description">
-        <p>query single user info.</p>
+        <p>Get a single project issue.</p>
     </div>
     
 
@@ -760,7 +1039,34 @@
 
         <tr>
             
-                <td class="name"><code>userId</code></td>
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>issueIid</code></td>
             
 
             <td class="type">
@@ -777,7 +1083,7 @@
 
             
 
-            <td class="description last"><p>The ID of a user</p></td>
+            <td class="description last"><p>The internal ID of a project's issue</p></td>
         </tr>
 
     
@@ -865,7 +1171,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="update"><span class="type-signature"></span>update(userId, user)</h4>
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove(projectId, issueIid)</h4>
     
     
 </dt>
@@ -873,7 +1179,7 @@
 
     
     <div class="description">
-        <p>update single user info</p>
+        <p>Only for admins and project owners. Soft deletes the issue in question.</p>
     </div>
     
 
@@ -908,7 +1214,34 @@
 
         <tr>
             
-                <td class="name"><code>userId</code></td>
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>issueIid</code></td>
             
 
             <td class="type">
@@ -925,31 +1258,7 @@
 
             
 
-            <td class="description last"><p>The ID of a user</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>user</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>user infromation</p></td>
+            <td class="description last"><p>The internal ID of a project's issue</p></td>
         </tr>
 
     
@@ -1009,26 +1318,317 @@
     
 
     
-    <h5>Returns:</h5>
+
     
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="subscribe"><span class="type-signature"></span>subscribe(projectId, issueIid)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Subscribes the authenticated user to an issue to receive notifications.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projectId</code></td>
             
 
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
 
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
+<span class="param-type">string</span>
 
 
-    </dd>
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>issueIid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The internal ID of a project's issue</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
 </dl>
 
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
         
+            
+<hr>
+<dt>
+    <h4 class="name" id="unsubscribe"><span class="type-signature"></span>unsubscribe(projectId, issueIid)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Unsubscribes the authenticated user from the issue to not receive notifications
+from it.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>issueIid</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The internal ID of a project's issue</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
 
     
 </dd>
@@ -1070,9 +1670,9 @@
 	</span>
 
 <span class="jsdoc-message">
-	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a>
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2017-08-24T17:55:34+08:00
+		on 2017-12-21T16:50:04+08:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
