@@ -1,13 +1,18 @@
 {
   "name": "gitlab-node",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "access gitlab api by using node",
   "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 8.0.0"
   },
   "scripts": {
-    "doc": "jsdoc -c jsdoc-conf.json"
+    "doc": "npm run doc:build && npm run doc:publish",
+    "doc:build": "jsdoc -c jsdoc-conf.json",
+    "doc:publish": "node script/doc.js"
   },
   "keywords": [
     "gitlab",
@@ -28,6 +33,7 @@
     "got": "^6.3.0"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.4.3"
   }
