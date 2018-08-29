@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>gitlab-node Class: Issues</title>
+	<title>gitlab-node Class: Jobs</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -61,13 +61,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: Issues</h1>
+	<h1 class="page-title">Class: Jobs</h1>
 <section>
 
 <header>
     
         <h2>
-        Issues
+        Jobs
         </h2>
         
     
@@ -80,7 +80,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="Issues"><span class="type-signature"></span>new Issues()</h4>
+    <h4 class="name" id="Jobs"><span class="type-signature"></span>new Jobs()</h4>
     
     
 </dt>
@@ -172,7 +172,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="all"><span class="type-signature"></span>all(qs)</h4>
+    <h4 class="name" id="cancel"><span class="type-signature"></span>cancel(projectId, jobId)</h4>
     
     
 </dt>
@@ -180,155 +180,7 @@
 
     
     <div class="description">
-        <p>Get all issues created by the authenticated user.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>qs</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">object</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>query params</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="create"><span class="type-signature"></span>create(projectId, issue)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>create a new project issue</p>
+        <p>Cancel a single job of a project</p>
     </div>
     
 
@@ -369,7 +221,7 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 |
 
 <span class="param-type">string</span>
@@ -390,13 +242,13 @@
 
         <tr>
             
-                <td class="name"><code>issue</code></td>
+                <td class="name"><code>jobId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">integer</span>
 
 
 
@@ -407,7 +259,7 @@
 
             
 
-            <td class="description last"></td>
+            <td class="description last"><p>The ID of a job</p></td>
         </tr>
 
     
@@ -467,26 +319,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -495,7 +327,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="group"><span class="type-signature"></span>group(groupId, qs)</h4>
+    <h4 class="name" id="pipeline"><span class="type-signature"></span>pipeline(projectId, pipelineId [, scope])</h4>
     
     
 </dt>
@@ -503,7 +335,7 @@
 
     
     <div class="description">
-        <p>Get a list of a group's issues.</p>
+        <p>Get a list of jobs for a pipeline.</p>
     </div>
     
 
@@ -526,6 +358,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -538,13 +372,13 @@
 
         <tr>
             
-                <td class="name"><code>groupId</code></td>
+                <td class="name"><code>projectId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 |
 
 <span class="param-type">string</span>
@@ -555,23 +389,31 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>The ID or URL-encoded path of the group owned by the authenticated user</p></td>
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>qs</code></td>
+                <td class="name"><code>pipelineId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">object</span>
+<span class="param-type">integer</span>
 
 
 
@@ -579,10 +421,55 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>query params</p></td>
+            <td class="description last"><p>The ID of a pipeline</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The scope of jobs to show, one or array of: created, pending, running, failed, success, canceled, skipped, manual; showing all jobs if none provided</p></td>
         </tr>
 
     
@@ -642,26 +529,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -670,7 +537,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="milestone"><span class="type-signature"></span>milestone(projectId, milestoneId)</h4>
+    <h4 class="name" id="play"><span class="type-signature"></span>play(projectId, jobId)</h4>
     
     
 </dt>
@@ -678,7 +545,7 @@
 
     
     <div class="description">
-        <p>Gets all issues assigned to a single project milestone.</p>
+        <p>Triggers a manual action to start a job.</p>
     </div>
     
 
@@ -719,7 +586,7 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 |
 
 <span class="param-type">string</span>
@@ -740,13 +607,13 @@
 
         <tr>
             
-                <td class="name"><code>milestoneId</code></td>
+                <td class="name"><code>jobId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 
 
 
@@ -757,7 +624,7 @@
 
             
 
-            <td class="description last"><p>The ID of a project milestone</p></td>
+            <td class="description last"><p>The ID of a job</p></td>
         </tr>
 
     
@@ -817,26 +684,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -845,7 +692,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="project"><span class="type-signature"></span>project(projectId)</h4>
+    <h4 class="name" id="project"><span class="type-signature"></span>project(projectId [, scope])</h4>
     
     
 </dt>
@@ -853,7 +700,7 @@
 
     
     <div class="description">
-        <p>Get a list of a project's issues.</p>
+        <p>Get a list of jobs in a project.</p>
     </div>
     
 
@@ -876,6 +723,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -894,7 +743,7 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 |
 
 <span class="param-type">string</span>
@@ -905,10 +754,55 @@
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>The ID or URL-encoded path of the project</p></td>
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>scope</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+|
+
+<span class="param-type">array</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The scope of jobs to show, one or array of: created, pending, running, failed, success, canceled, skipped, manual; showing all jobs if none provided</p></td>
         </tr>
 
     
@@ -968,26 +862,6 @@
     
 
     
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
 
     
 </dd>
@@ -996,7 +870,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="query"><span class="type-signature"></span>query(projectId, issueIid)</h4>
+    <h4 class="name" id="trace"><span class="type-signature"></span>trace(projectId, jobId)</h4>
     
     
 </dt>
@@ -1004,7 +878,7 @@
 
     
     <div class="description">
-        <p>Get a single project issue.</p>
+        <p>Get a trace of a specific job of a project</p>
     </div>
     
 
@@ -1045,7 +919,7 @@
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 |
 
 <span class="param-type">string</span>
@@ -1066,13 +940,13 @@
 
         <tr>
             
-                <td class="name"><code>issueIid</code></td>
+                <td class="name"><code>jobId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">integer</span>
 
 
 
@@ -1083,493 +957,7 @@
 
             
 
-            <td class="description last"><p>The internal ID of a project's issue</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">Promise</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="remove"><span class="type-signature"></span>remove(projectId, issueIid)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Only for admins and project owners. Soft deletes the issue in question.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>projectId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-|
-
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>issueIid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The internal ID of a project's issue</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="subscribe"><span class="type-signature"></span>subscribe(projectId, issueIid)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Subscribes the authenticated user to an issue to receive notifications.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>projectId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-|
-
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>issueIid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The internal ID of a project's issue</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="unsubscribe"><span class="type-signature"></span>unsubscribe(projectId, issueIid)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Unsubscribes the authenticated user from the issue to not receive notifications
-from it.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>projectId</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-|
-
-<span class="param-type">string</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>issueIid</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The internal ID of a project's issue</p></td>
+            <td class="description last"><p>The ID of a job</p></td>
         </tr>
 
     
