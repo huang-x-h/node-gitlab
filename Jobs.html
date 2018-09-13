@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Commits.html">Commits</a></li><li><a href="Contributors.html">Contributors</a></li><li><a href="Gitlab.html">Gitlab</a></li><li><a href="Groups.html">Groups</a></li><li><a href="Issues.html">Issues</a></li><li><a href="Jobs.html">Jobs</a></li><li><a href="Labels.html">Labels</a></li><li><a href="Members.html">Members</a></li><li><a href="MergeRequests.html">MergeRequests</a></li><li><a href="Milestones.html">Milestones</a></li><li><a href="Notes.html">Notes</a></li><li><a href="Pipelines.html">Pipelines</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Users.html">Users</a></li>
+					<li><a href="Commits.html">Commits</a></li><li><a href="Contributors.html">Contributors</a></li><li><a href="Gitlab.html">Gitlab</a></li><li><a href="Groups.html">Groups</a></li><li><a href="Issues.html">Issues</a></li><li><a href="Jobs.html">Jobs</a></li><li><a href="Labels.html">Labels</a></li><li><a href="Members.html">Members</a></li><li><a href="MergeRequests.html">MergeRequests</a></li><li><a href="Milestones.html">Milestones</a></li><li><a href="Notes.html">Notes</a></li><li><a href="Pipelines.html">Pipelines</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Repositories.html">Repositories</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Users.html">Users</a></li>
 				</ul>
 			</li>
 			
@@ -260,6 +260,185 @@
             
 
             <td class="description last"><p>The ID of a job</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="downloadArtifactFile"><span class="type-signature"></span>downloadArtifactFile(projectId, jobId, artifactPath)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Download a single artifact file from within the job's artifacts archive.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>jobId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a job</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>artifactPath</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Path to a file inside the artifacts archive</p></td>
         </tr>
 
     
@@ -870,6 +1049,161 @@
             
 <hr>
 <dt>
+    <h4 class="name" id="query"><span class="type-signature"></span>query(projectId, jobId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a single job of a project</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>projectId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the project owned by the authenticated user</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>jobId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID of a job</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
     <h4 class="name" id="trace"><span class="type-signature"></span>trace(projectId, jobId)</h4>
     
     
@@ -1060,7 +1394,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-08-29T16:15:24+08:00
+		on 2018-09-13T10:29:45+08:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

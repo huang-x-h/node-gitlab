@@ -40,7 +40,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Commits.html">Commits</a></li><li><a href="Contributors.html">Contributors</a></li><li><a href="Gitlab.html">Gitlab</a></li><li><a href="Groups.html">Groups</a></li><li><a href="Issues.html">Issues</a></li><li><a href="Jobs.html">Jobs</a></li><li><a href="Labels.html">Labels</a></li><li><a href="Members.html">Members</a></li><li><a href="MergeRequests.html">MergeRequests</a></li><li><a href="Milestones.html">Milestones</a></li><li><a href="Notes.html">Notes</a></li><li><a href="Pipelines.html">Pipelines</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Users.html">Users</a></li>
+					<li><a href="Commits.html">Commits</a></li><li><a href="Contributors.html">Contributors</a></li><li><a href="Gitlab.html">Gitlab</a></li><li><a href="Groups.html">Groups</a></li><li><a href="Issues.html">Issues</a></li><li><a href="Jobs.html">Jobs</a></li><li><a href="Labels.html">Labels</a></li><li><a href="Members.html">Members</a></li><li><a href="MergeRequests.html">MergeRequests</a></li><li><a href="Milestones.html">Milestones</a></li><li><a href="Notes.html">Notes</a></li><li><a href="Pipelines.html">Pipelines</a></li><li><a href="Projects.html">Projects</a></li><li><a href="Repositories.html">Repositories</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Users.html">Users</a></li>
 				</ul>
 			</li>
 			
@@ -172,19 +172,334 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="owned"><span class="type-signature"></span>owned()</h4>
+    <h4 class="name" id="all"><span class="type-signature"></span>all(qs)</h4>
     
     
 </dt>
 <dd>
 
     
+    <div class="description">
+        <p>Get a list of visible groups for the authenticated user. When accessed without
+authentication, only public groups are returned.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>qs</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>query information</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
 
     
 
     
 
     
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="create"><span class="type-signature"></span>create(group)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Creates a new project group. Available only for users who can create groups.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>group</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>group information</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="query"><span class="type-signature"></span>query(groupId)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get all details of a group. This endpoint can be accessed without authentication
+if the group is publicly accessible.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>groupId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">integer</span>
+|
+
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The ID or URL-encoded path of the group owned by the authenticated user</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
     
 
     
@@ -281,7 +596,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
 	
-		on 2018-08-29T16:15:24+08:00
+		on 2018-09-13T10:29:45+08:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
