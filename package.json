@@ -1,6 +1,6 @@
 {
   "name": "gitlab-node",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "access gitlab api by using node",
   "main": "lib/index.js",
   "files": [
